@@ -9,8 +9,11 @@ e = Entry(root, fg="red", width=30, borderwidth=5)
 e.grid(row=0, column=0, columnspan=4, padx=10, pady= 10)
 
 def button_click(number):
-    e.delete(0, END)
     e.insert(0, number)
+
+def clear():
+    e.delete(0, END)
+
 
 buttoon_1 = Button(root, text="1", padx=40, pady=20, command=lambda : button_click(1))
 buttoon_2 = Button(root, text="2", padx=40, pady=20, command=lambda : button_click(2))
@@ -24,7 +27,7 @@ buttoon_9 = Button(root, text="9", padx=40, pady=20, command=lambda : button_cli
 buttoon_0 = Button(root, text="0", padx=40, pady=20, command=lambda : button_click(0))
 buttoon_add = Button(root, text="+", padx=39, pady=20, command=lambda : button_click())
 buttoon_equal = Button(root, text="=", padx=180, pady=20, command=lambda : button_click())
-buttoon_clear = Button(root, text="C", padx=39, pady=20, command=lambda : button_click())
+buttoon_clear = Button(root, text="C", padx=39, pady=20, command=clear)
 
 buttoon_1.grid(row= 3,column= 0)
 buttoon_2.grid(row= 3,column= 1)
