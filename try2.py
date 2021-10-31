@@ -1,7 +1,7 @@
 from tkinter import *
 
 root = Tk()
-root.title("Calculator")
+root.title("Calculator By DIVYANSH")
 # root.configure(bg='black')
 
 
@@ -9,7 +9,9 @@ e = Entry(root, fg="red", width=30, borderwidth=5)
 e.grid(row=0, column=0, columnspan=4, padx=10, pady= 10)
 
 def button_click(number):
-    e.insert(0, number)
+    current = e.get()
+    e.delete(0, END)
+    e.insert(0, str(current) + str(number))
 
 def clear():
     e.delete(0, END)
