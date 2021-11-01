@@ -1,4 +1,3 @@
-import copy
 from tkinter import *
 
 root = Tk()
@@ -8,6 +7,8 @@ root.title("Calculator By DIVYANSH")
 
 e = Entry(root, fg="red", width=30, borderwidth=5)
 e.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
+
+
 # num1 = 0
 
 def button_click(number):
@@ -15,43 +16,49 @@ def button_click(number):
     e.delete(0, END)
     e.insert(0, str(current) + str(number))
 
+
 def button_add():
     # print(num1)
     cur2 = e.get()
     e.delete(0, END)
     num2 = int(cur2)
-    sum_of_it = num1+num2
+    sum_of_it = num1 + num2
     e.insert(0, str(sum_of_it))
+
 
 def button_sub():
     # print(num1)
     cur2 = e.get()
     e.delete(0, END)
     num2 = int(cur2)
-    sub_of_it = num1-num2
+    sub_of_it = num1 - num2
     e.insert(0, str(sub_of_it))
+
 
 def button_mult():
     # print(num1)
     cur2 = e.get()
     e.delete(0, END)
     num2 = int(cur2)
-    prod_of_it = num1*num2
+    prod_of_it = num1 * num2
     e.insert(0, str(prod_of_it))
+
 
 def button_div():
     # print(num1)
     cur2 = e.get()
     e.delete(0, END)
     num2 = int(cur2)
-    div_of_it = num1/num2
+    div_of_it = num1 / num2
     e.insert(0, str(div_of_it))
+
 
 def button_command():
     cur1 = e.get()
     global num1
     num1 = int(cur1[:])
     e.delete(0, END)
+
 
 def clear():
     e.delete(0, END)
