@@ -6,7 +6,7 @@
 # Enter the second number
 # Then press the sign of what you want to do with those two numbers
 # And Done!!!
-# Do tell me if you see any error of anykind.
+# Do tell me if you see any error of any kind.
 
 # Importing stuff
 from tkinter import *
@@ -19,8 +19,6 @@ root.title("Calculator By DIVYANSH")
 e = Entry(root, fg="red", width=30, borderwidth=5)
 e.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
-
-# num1 = 0
 
 def button_click(number):
     current = e.get()
