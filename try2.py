@@ -16,18 +16,42 @@ def button_click(number):
     e.insert(0, str(current) + str(number))
 
 def button_add():
-    cur1 = e.get()
-    global num1
-    num1 = int(cur1[:])
-    e.delete(0, END)
-
-def button_equal():
-    print(num1)
+    # print(num1)
     cur2 = e.get()
     e.delete(0, END)
     num2 = int(cur2)
     sum_of_it = num1+num2
     e.insert(0, str(sum_of_it))
+
+def button_sub():
+    # print(num1)
+    cur2 = e.get()
+    e.delete(0, END)
+    num2 = int(cur2)
+    sub_of_it = num1-num2
+    e.insert(0, str(sub_of_it))
+
+def button_mult():
+    # print(num1)
+    cur2 = e.get()
+    e.delete(0, END)
+    num2 = int(cur2)
+    prod_of_it = num1*num2
+    e.insert(0, str(prod_of_it))
+
+def button_div():
+    # print(num1)
+    cur2 = e.get()
+    e.delete(0, END)
+    num2 = int(cur2)
+    div_of_it = num1/num2
+    e.insert(0, str(div_of_it))
+
+def button_command():
+    cur1 = e.get()
+    global num1
+    num1 = int(cur1[:])
+    e.delete(0, END)
 
 def clear():
     e.delete(0, END)
@@ -44,13 +68,16 @@ button_8 = Button(root, text="8", padx=40, pady=20, command=lambda: button_click
 button_9 = Button(root, text="9", padx=40, pady=20, command=lambda: button_click(9))
 button_0 = Button(root, text="0", padx=40, pady=20, command=lambda: button_click(0))
 button_sum = Button(root, text="+", padx=39, pady=20, command=button_add)
-button_equal = Button(root, text="=", padx=180, pady=20, command=button_equal)
+button_diff = Button(root, text="-", padx=40, pady=20, command=button_sub)
+button_product = Button(root, text="x", padx=40, pady=20, command=button_mult)
+button_division = Button(root, text="/", padx=41, pady=20, command=button_div)
+button_equal = Button(root, text="Command", padx=13, pady=20, command=button_command)
 button_clear = Button(root, text="C", padx=39, pady=20, command=clear)
 
 button_1.grid(row=3, column=0)
 button_2.grid(row=3, column=1)
 button_3.grid(row=3, column=2)
-button_0.grid(row=3, column=3)
+button_diff.grid(row=3, column=3)
 
 button_4.grid(row=2, column=0)
 button_5.grid(row=2, column=1)
@@ -62,5 +89,8 @@ button_8.grid(row=1, column=1)
 button_9.grid(row=1, column=2)
 button_clear.grid(row=1, column=3)
 
-button_equal.grid(row=4, column=0, columnspan=4)
+button_0.grid(row=4, column=0)
+button_product.grid(row=4, column=1)
+button_division.grid(row=4, column=2)
+button_equal.grid(row=4, column=3)
 root.mainloop()
