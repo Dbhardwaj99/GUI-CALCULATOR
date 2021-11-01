@@ -1,4 +1,27 @@
-# Importing stuff
+def esehi():
+    a = 0
+    b = 0
+    c = 4
+    d = 0
+    e = 1
+
+    a_has = bool(a)
+    b_has = bool(b)
+    c_has = bool(c)
+    d_has = bool(d)
+    e_has = bool(e)
+
+    if a_has == True:
+        print("something")
+    elif b_has == True:
+        print(("Some other thing"))
+    elif c_has == True:
+        print(("Some other other thing"))
+    elif d_has == True:
+        print(("Some other other other thing"))
+    else:
+        print("nothing")
+import copy
 from tkinter import *
 
 root = Tk()
@@ -10,24 +33,23 @@ e = Entry(root, fg="red", width=30, borderwidth=5)
 e.grid(row=0, column=0, columnspan=4, padx=10, pady=10)
 
 
-def clear():
-    e.delete(0, END)
-
+# num1 = 0
 
 def button_click(number):
     current = e.get()
     e.delete(0, END)
     e.insert(0, str(current) + str(number))
 
+def clear():
+    e.delete(0, END)
 
 def button_add():
     cur1 = e.get()
     global num1
     global math
-    math = "addition"
+    math = "addision"
     num1 = int(cur1[:])
     e.delete(0, END)
-
 
 def button_sub():
     cur1 = e.get()
@@ -37,7 +59,6 @@ def button_sub():
     num1 = int(cur1[:])
     e.delete(0, END)
 
-
 def button_mult():
     cur1 = e.get()
     global num1
@@ -45,7 +66,6 @@ def button_mult():
     math = "multiplication"
     num1 = int(cur1[:])
     e.delete(0, END)
-
 
 def button_div():
     cur1 = e.get()
@@ -55,9 +75,8 @@ def button_div():
     num1 = int(cur1[:])
     e.delete(0, END)
 
-
 def button_equal():
-    if math == "addition":
+    if math == "addision":
         print(num1)
         cur2 = e.get()
         e.delete(0, END)
@@ -86,8 +105,7 @@ def button_equal():
         result = num1 / num2
         e.insert(0, str(result))
     else:
-        show=e.get()
-        e.insert(0, show)
+        e.insert(0, str(num1))
 
 button_1 = Button(root, text="1", padx=40, pady=20, command=lambda: button_click(1))
 button_2 = Button(root, text="2", padx=40, pady=20, command=lambda: button_click(2))
@@ -99,12 +117,12 @@ button_7 = Button(root, text="7", padx=40, pady=20, command=lambda: button_click
 button_8 = Button(root, text="8", padx=40, pady=20, command=lambda: button_click(8))
 button_9 = Button(root, text="9", padx=40, pady=20, command=lambda: button_click(9))
 button_0 = Button(root, text="0", padx=40, pady=20, command=lambda: button_click(0))
-button_sum = Button(root, text="+", padx=39, pady=20, command=button_add)
-button_diff = Button(root, text="-", padx=40, pady=20, command=button_sub)
-button_product = Button(root, text="x", padx=40, pady=20, command=button_mult)
-button_division = Button(root, text="/", padx=41, pady=20, command=button_div)
+button_sum = Button(root, text="+", padx=40, pady=20, command=button_add)
+button_diff = Button(root, text="-", padx=41, pady=20, command=button_sub)
+button_product = Button(root, text="x", padx=41, pady=20, command=button_mult)
+button_division = Button(root, text="/", padx=42, pady=20, command=button_div)
 button_equal = Button(root, text="=", padx=39, pady=20, command=button_equal)
-button_clear = Button(root, text="C", padx=39, pady=20, command=clear)
+button_clear = Button(root, text="C", padx=40, pady=20, command=clear)
 
 button_1.grid(row=3, column=0)
 button_2.grid(row=3, column=1)
@@ -125,4 +143,5 @@ button_0.grid(row=4, column=0)
 button_product.grid(row=4, column=1)
 button_division.grid(row=4, column=2)
 button_equal.grid(row=4, column=3)
+root.mainloop()
 root.mainloop()
