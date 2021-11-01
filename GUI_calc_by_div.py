@@ -87,7 +87,7 @@ button_sum = Button(root, text="+", padx=39, pady=20, command=button_add)
 button_diff = Button(root, text="-", padx=40, pady=20, command=button_sub)
 button_product = Button(root, text="x", padx=40, pady=20, command=button_mult)
 button_division = Button(root, text="/", padx=41, pady=20, command=button_div)
-button_equal = Button(root, text="Command", padx=13, pady=20, command=button_command)
+button_equal = Button(root, text="=", padx=39, pady=20, command=button_command)
 button_clear = Button(root, text="C", padx=39, pady=20, command=clear)
 
 button_1.grid(row=3, column=0)
