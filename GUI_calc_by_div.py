@@ -1,3 +1,14 @@
+# Hello friends.. Lemme show you how this calculator works..
+# When you run this file.. A calculator will show up on the screen
+# in order to do calculations:-
+# Enter the first number
+# press command
+# Enter the second number
+# Then press the sign of what you want to do with those two numbers
+# And Done!!!
+# Do tell me if you see any error of anykind.
+
+# Importing stuff
 from tkinter import *
 
 root = Tk()
